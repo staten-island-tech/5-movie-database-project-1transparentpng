@@ -1,5 +1,0 @@
-# testing using yaml
-name: Movies Database Project
-desc: Create python code that utilizes a .json file containing Movies
-settings:
-  read_from: movies.json

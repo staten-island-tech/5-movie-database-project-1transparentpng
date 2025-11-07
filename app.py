@@ -31,12 +31,19 @@ def findMovie():
         if search in title: 
 ## "in" searches for the string / variable in the other string / variable provided. this line finds if the search var (the user input, a string) is found in the title of the searched movie. If it is, it prints it
             print(movie["title"])
-findMovie()
 ## File Six
-'''def filterGenre():
+def filterGenre():
+    a = 0
     genre = input("Please give me a Genre to filter movies by.")
     if not genre:
         print("You did not input a genre!")
     for movie in data:
         if genre in movie["genres"]:
-            print(movie["title"])'''
+            print(movie["title"])
+            a += 1
+    if a == 0:
+        print("Couldnt find any movies under that genre.")
+    else:
+        print(f"Found {a} movies under the genre of {genre}")
+filterGenre()
+

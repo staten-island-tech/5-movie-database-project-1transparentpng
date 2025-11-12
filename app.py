@@ -45,5 +45,27 @@ def filterGenre():
         print("Couldnt find any movies under that genre.")
     else:
         print(f"Found {a} movies under the genre of {genre}")
-filterGenre()
 
+
+
+
+
+
+
+
+
+
+def filterGenres():
+    a = 0
+    genre = input("Please give me a Genre to filter movies by.")
+    if not genre:
+        print("You did not input a genre!")
+    for movie in data:
+        if genre.lower() in movie["genres"]:
+            print(movie["title"])
+            a += 1
+    if a == 0:
+        print("Couldnt find any movies under that genre.")
+    else:
+        print(f"Found {a} movies under the genre of {genre}")
+filterGenres()
